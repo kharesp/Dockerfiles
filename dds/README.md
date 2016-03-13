@@ -1,6 +1,6 @@
-**Dockerfile for installing RTI DDS Connext Professional 5.2.0 on Ubuntu 14.04**
- 
-**To build the docker image:**
+#### Dockerfile for installing RTI DDS Connext Professional 5.2.0 on Ubuntu 14.04
+
+###### To build the docker image:
  1. Create new build directory
  
     Example: `~/dds`
@@ -28,8 +28,7 @@
      
      Example: `docker run -t -i kharesp/rti_dds:5.2.0 /bin/bash`
  
-
-**To run hello\_simple pub-sub example: **
+###### To run hello\_simple pub-sub example:
  1. Run publisher docker container in one terminal with:
  
    `docker run -t -i <repo>/<imagename>:tag /bin/bash`
