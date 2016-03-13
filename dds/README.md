@@ -11,9 +11,9 @@
  
     Example:
     ```
-    ~/dds/dep/rti_connext_dds-5.2.0-pro-host-x64Linux.run
-    ~/dds/dep/rti_connext_dds-5.2.0-pro-target-x64Linux3gcc4.8.2.rtipkg
-    ~/dds/dep/rti_license.dat
+ ~/dds/dep/rti_connext_dds-5.2.0-pro-host-x64Linux.run
+ ~/dds/dep/rti_connext_dds-5.2.0-pro-target-x64Linux3gcc4.8.2.rtipkg
+ ~/dds/dep/rti_license.dat
     ```
  4. Build Docker image from base directory with:
  
@@ -44,9 +44,9 @@
  
     `docker run -t -i <repo>/<imagename>:tag /bin/bash`
 
-     Once inside the container:
-     ```
-     cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
-     Build the example with: ./build.sh
-     Run subscriber with: ./runSub.sh
-     ```
+    Once inside the container:
+    ```
+    cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
+    Build the example with: ./build.sh
+    Run subscriber with: ./runSub.sh
+    ```
