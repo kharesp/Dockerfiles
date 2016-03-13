@@ -35,9 +35,9 @@
 
     Once inside the container:
     ```
-       cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
-       Build the example with: ./build.sh
-       Run publisher with: ./runPub.sh
+    cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
+    Build the example with: ./build.sh
+    Run publisher with: ./runPub.sh
     ```
 
  2. Run subscriber docker container in another terminal with:
@@ -45,8 +45,8 @@
     `docker run -t -i <repo>/<imagename>:tag /bin/bash`
 
      Once inside the container:
-       ```
-       cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
-       Build the example with: ./build.sh
-       Run subscriber with: ./runSub.sh
-       ```
+     ```
+     cd $RTI_WORKSPACE/5.2.0/examples/connext_dds/java/hello_simple
+     Build the example with: ./build.sh
+     Run subscriber with: ./runSub.sh
+     ```
