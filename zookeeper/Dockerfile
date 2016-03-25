@@ -29,4 +29,4 @@ RUN cp $ZK_HOME/conf/zoo_sample.cfg $ZK_HOME/conf/zoo.cfg && \
 EXPOSE 2181 2888 3888
 
 # add zk-init.sh script
-COPY dep/zk-init.sh
+COPY dep/zk-init.sh .
