@@ -1,0 +1,1 @@
+Length:   100  Latency: Ave    324 us  Std 1123.4 us  Min    152 us  Max  92318 us  50%    182 us  90%    582 us  99%   1464 us  99.99%  92318 us  99.9999%  92318 us

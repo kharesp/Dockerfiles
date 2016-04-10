@@ -1,0 +1,1 @@
+Length:   100  Packets: 10000000  Packets/s(ave):    7261  Mbps(ave):     5.8  Lost: 0

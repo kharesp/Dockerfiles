@@ -1,0 +1,12 @@
+Length:    32  Latency: Ave    507 us  Std 1801.5 us  Min    191 us  Max  54516 us  50%    241 us  90%   1508 us  99%   2243 us  99.99%  54516 us  99.9999%  54516 us
+Length:    64  Latency: Ave    349 us  Std  392.6 us  Min    177 us  Max   1910 us  50%    216 us  90%    582 us  99%   1608 us  99.99%   1910 us  99.9999%   1910 us
+Length:   128  Latency: Ave    329 us  Std  364.1 us  Min    178 us  Max   1649 us  50%    213 us  90%    319 us  99%   1597 us  99.99%   1649 us  99.9999%   1649 us
+Length:   256  Latency: Ave    335 us  Std  371.2 us  Min    190 us  Max   2245 us  50%    219 us  90%    312 us  99%   1607 us  99.99%   2245 us  99.9999%   2245 us
+Length:   512  Latency: Ave    321 us  Std  353.9 us  Min    188 us  Max   1682 us  50%    215 us  90%    283 us  99%   1588 us  99.99%   1682 us  99.9999%   1682 us
+Length:  1024  Latency: Ave    421 us  Std  482.9 us  Min    201 us  Max   4630 us  50%    227 us  90%   1525 us  99%   1625 us  99.99%   4630 us  99.9999%   4630 us
+Length:  2048  Latency: Ave    451 us  Std  518.8 us  Min    225 us  Max   2085 us  50%    266 us  90%   1837 us  99%   1982 us  99.99%   2085 us  99.9999%   2085 us
+Length:  4096  Latency: Ave    439 us  Std  443.6 us  Min    292 us  Max   4162 us  50%    330 us  90%    385 us  99%   2348 us  99.99%   4162 us  99.9999%   4162 us
+Length:  8192  Latency: Ave    519 us  Std  149.3 us  Min    376 us  Max   3166 us  50%    493 us  90%    588 us  99%   1013 us  99.99%   3166 us  99.9999%   3166 us
+Length: 16384  Latency: Ave   3317 us  Std  241.8 us  Min   1541 us  Max   6041 us  50%   3310 us  90%   3440 us  99%   3596 us  99.99%   6041 us  99.9999%   6041 us
+Length: 32768  Latency: Ave   7027 us  Std  558.1 us  Min   2472 us  Max  12678 us  50%   7081 us  90%   7280 us  99%   8272 us  99.99%  12678 us  99.9999%  12678 us
+Length: 63000  Latency: Ave  13879 us  Std  580.9 us  Min   5244 us  Max  27161 us  50%  13929 us  90%  14165 us  99%  14282 us  99.99%  27161 us  99.9999%  27161 us

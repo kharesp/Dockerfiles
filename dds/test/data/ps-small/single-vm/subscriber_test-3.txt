@@ -1,0 +1,12 @@
+Length:    32  Packets: 10000000  Packets/s(ave):   12346  Mbps(ave):     3.2  Lost: 0
+Length:    64  Packets: 10000000  Packets/s(ave):   12704  Mbps(ave):     6.5  Lost: 0
+Length:   128  Packets: 10000000  Packets/s(ave):   12491  Mbps(ave):    12.8  Lost: 0
+Length:   256  Packets: 10000000  Packets/s(ave):   12328  Mbps(ave):    25.2  Lost: 0
+Length:   512  Packets:  5000000  Packets/s(ave):   12277  Mbps(ave):    50.3  Lost: 0
+Length:  1024  Packets:  5000000  Packets/s(ave):   12241  Mbps(ave):   100.3  Lost: 0
+Length:  2048  Packets:  2500000  Packets/s(ave):   11723  Mbps(ave):   192.1  Lost: 0
+Length:  4096  Packets:  2500000  Packets/s(ave):    8716  Mbps(ave):   285.6  Lost: 0
+Length:  8192  Packets:  1250000  Packets/s(ave):    6682  Mbps(ave):   437.9  Lost: 0
+Length: 16384  Packets:   625000  Packets/s(ave):    5354  Mbps(ave):   701.7  Lost: 0
+Length: 32768  Packets:   311792  Packets/s(ave):    3885  Mbps(ave):  1018.4  Lost: 0
+Length: 63000  Packets:   156000  Packets/s(ave):    2835  Mbps(ave):  1428.9  Lost: 0

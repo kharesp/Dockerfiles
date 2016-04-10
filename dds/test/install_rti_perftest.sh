@@ -7,5 +7,5 @@ tar -xvf rtiperftestdds520.tar.gz
 rm rtiperftestdds520.tar.gz
 
 # build java test scripts 
-sudo apt-get install -y ant ksh
+sudo apt-get install -y ant ksh 
 cd ./rtiperftest.5.2.0/perftest_java && ant -propertyfile ../resource/properties/dds_release.properties
