@@ -50,3 +50,37 @@
     Build the example with: ./build.sh
     Run subscriber with: ./runSub.sh
     ```
+
+###### Performance Test Results: 
+
+[RTI's perftest] (https://community.rti.com/downloads/rti-connext-dds-performance-test) module was used to get some baseline throughput and latency results for running RTI DDS in a dockerized environment. The tests were run for the following four configurations: 
+
+  * **Single VM**: Perftest's publisher and subscriber were run on a single VM
+  * **Single VM 2 Containers**: Dockerized perftest publisher and Dockerized perftest subscriber were run on a single VM
+  * **2 VMs**: Perftest's publisher and subscriber were run on two different VMs (on the same virtual LAN)
+  * **2 VMs 2 Containers**: Dockerized perftest publisher and Dockerized perftest subscriber were run on two different VMs. [Weave](https://www.weave.works/) was used for networking the docker containers running on two different VMs. 
+
+Three tests were performed for each of the above four configurations:
+
+  * **Test-1**: Perftest publisher sends 10,000,000 messages (100 byes each) to the subscriber. After each 1000th message, a latency ping is sent by the publisher. On receiving the latency ping, the subscriber echoes it back to the publisher. The publisher reports the round-trip latency (publisher-subscriber-publisher) on receiving the latency echo  and the subscriber reports the throughput observed. 
+
+    ```
+    perftest_java -pub -numIter 10000000 -latencyCount 1000 -noPrintIntervals
+    perftest_java -sub -noPrintIntervals
+    ```
+  * **Test-2**: Publisher sends 10,000 latency pings to get the baseline latency measurements.
+
+    ```
+    perftest_java -pub -latencyTest -numIter 10000 -noPrintIntervals
+    perftest_java -sub -noPrintIntervals
+    ```
+
+  * **Test-3**: Scan test for different message sizes (32 bytes to 63000 bytes)
+
+    ```
+    perftest_java -pub -scan -noPrintIntervals
+    perftest_java -sub -noPrintIntervals
+    ```
+
+The following results were observed for `ps.small` VM (1 Virtual CPU, 2 GB RAM, 40 GB storage) running `ubuntu 14.04`, `docker version 1.10.3` and `weave 1.4.6`. 
+
