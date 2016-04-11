@@ -85,7 +85,7 @@ Three tests were performed for each of the above four configurations:
     ```
 
 
-**The following results were observed for** `ps.small` VM (1 Virtual CPU, 2 GB RAM, 40 GB storage) running `ubuntu 14.04`, `docker version 1.10.3` and `weave 1.4.6`.
+**The following results were observed for** `ps.small` VM (1 Virtual CPU, 2 GB RAM, 40 GB storage) running `ubuntu 14.04`, `docker version 1.10.3` and `weave 1.4.6`. The perftest result files for this test (*i.e.* for `ps.small` VM type) are present at `./test/data/ps-small/`. 
 
 ###### Test-1 (ps-small) 
 ![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-1.png "ps-small Test-1")
@@ -101,7 +101,7 @@ For latency test (Test-2), the baseline average latency between publisher-subscr
 ###### Test-3 (ps-small)
 ![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-3.png "ps-small Test-3")
 
-The above graph shows the latency and throughput observed under different test configurations for different message sizes: 32 to 63,000 bytes. The latency for dockerized publisher-subscriber running on two different VMs is much higer (and throughput is much lower) than the remaining three test cases (`single VM`, `single VM 2 containers` and `2 VMs`). 
+The above graph shows the latency (*note: Log scale*) and throughput observed under different test configurations for different message sizes: 32 to 63,000 bytes. The latency for dockerized publisher-subscriber running on two different VMs is much higer (and throughput is much lower) than the remaining three test cases (`single VM`, `single VM 2 containers` and `2 VMs`). 
 
 
 
