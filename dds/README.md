@@ -101,7 +101,7 @@ For latency test (Test-2), the baseline average latency between publisher-subscr
 ###### Test-3 (ps-small)
 ![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-3.png "ps-small Test-3")
 
-The above graph shows the latency (*note: Log scale*) and throughput observed under different test configurations for different message sizes: 32 to 63,000 bytes. The latency for dockerized publisher-subscriber running on two different VMs is much higer (and throughput is much lower) than the remaining three test cases (`single VM`, `single VM 2 containers` and `2 VMs`). 
+The above graph shows the latency (*note: Log scale*) and throughput observed under different test configurations for different message sizes: 32 to 63,000 bytes. The latency for dockerized publisher-subscriber running on two different VMs is much higher (and throughput is much lower) than the remaining three test cases (`single VM`, `single VM 2 containers` and `2 VMs`). 
 
 
 
