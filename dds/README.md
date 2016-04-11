@@ -1,6 +1,8 @@
 #### Dockerfile for installing RTI DDS Connext Professional 5.2.0 on Ubuntu 14.04
 
-###### To build the docker image:
+
+
+##### To build the docker image:
  1. Create new build directory
  
     Example: `~/dds`
@@ -28,7 +30,7 @@
      
      Example: `docker run -t -i kharesp/rti_dds:5.2.0 /bin/bash`
  
-###### To run hello\_simple pub-sub example:
+##### To run hello\_simple pub-sub example:
  1. Run publisher docker container in one terminal with:
  
    `docker run -t -i <repo>/<imagename>:tag /bin/bash`
@@ -51,7 +53,7 @@
     Run subscriber with: ./runSub.sh
     ```
 
-###### Performance Test Results: 
+##### Performance Test Results: 
 
 [RTI's perftest] (https://community.rti.com/downloads/rti-connext-dds-performance-test) module was used to get some baseline throughput and latency results for running RTI DDS in a dockerized environment. The tests were run for the following four configurations: 
 
@@ -82,5 +84,24 @@ Three tests were performed for each of the above four configurations:
     perftest_java -sub -noPrintIntervals
     ```
 
-The following results were observed for `ps.small` VM (1 Virtual CPU, 2 GB RAM, 40 GB storage) running `ubuntu 14.04`, `docker version 1.10.3` and `weave 1.4.6`. 
+
+**The following results were observed for** `ps.small` VM (1 Virtual CPU, 2 GB RAM, 40 GB storage) running `ubuntu 14.04`, `docker version 1.10.3` and `weave 1.4.6`.
+
+###### Test-1 (ps-small) 
+![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-1.png "ps-small Test-1")
+    On a single VM, oddly the average latency of communication between dockerized publisher-subscriber pair is `~90%` less than that observed when simply running the publisher-subscriber pair (not-dockerized) on the same VM (`179 us vs 1900 us`). The throughput of dockerized publisher-subscriber pair is  `~44%` less (`7,261 msgs/sec vs 13,132 msgs/sec`) than that observed when running publisher and subscriber on the same VM (not-dockerized). 
+
+For two VMs, the latency of communication between dockerized publisher running on first VM and dockerized subscriber on another VM is *significantly* higher than that observed for publisher(not dockerized) on one VM and subscriber (not-dockerized) on another VM (`5474 us vs 324 us`).  [Weave](https://www.weave.works/) (used for enabling communication between docker containers running on two different hosts) imposes a very high overhead.  The throughput for dockerized publisher and dockerized subscriber running on two different VMs, is `~73%` less than the throughput observed for publisher (not-dockerized) and subscriber (not-dockerized) running on two different VMs. (`4,414 msgs/sec vs 16,829 msgs/sec`)
+
+###### Test-2 (ps-small)
+![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-2.png "ps-small Test-2")
+
+For latency test (Test-2), the baseline average latency between publisher-subscriber pair (not-dockerized) on same VM or two different VMs is the same `~218 us`. The baseline average latency between dockerized publisher-subscriber on the same VM is also observed to be `~218 us`. However, the baseline average latency between dockerized publisher-subscriber pair on two different VMs is *much* higer `~3609 us` than that for all other test configurations (`single VM`, `single VM 2 containers`, ` 2 VMs`). [Weave](https://www.weave.works/), used for networking containers on two different host machines imposes a high overhead. 
+
+###### Test-3 (ps-small)
+![alt text](https://github.com/kharesp/Dockerfiles/blob/master/dds/test/data/ps-small/graphs/ps_small_test-3.png "ps-small Test-3")
+
+The above graph shows the latency and throughput observed under different test configurations for different message sizes: 32 to 63,000 bytes. The latency for dockerized publisher-subscriber running on two different VMs is much higer (and throughput is much lower) than the remaining three test cases (`single VM`, `single VM 2 containers` and `2 VMs`). 
+
+
 
